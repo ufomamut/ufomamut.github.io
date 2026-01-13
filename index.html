@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Interactive Conway Game of Life simulation used as a living hero background for a personal developer portfolio.">
+    <meta name="author" content="Michal Socha - Ufomamut">
+
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <title>Portfolio</title>
+</head>
+
+<body>
+
+    <!-- HERO -->
+    <section class="hero state-intro">
+
+        <!-- INTRO HERO -->
+        <div class="hero-intro">
+            <h1>MICHAL SOCHA</h1>
+            <p>.NET · JavaScript · HTML · CSS</p>
+
+            <div class="hero-actions">
+                <button class="btn" id="showProjects">Projekty</button>
+                <button class="btn" id="openContact">Kontakt</button>
+            </div>
+        </div>
+
+        <!-- PROJECTS HERO -->
+        <div class="hero-projects">
+            <h2>Mé projekty</h2>
+
+            <div class="projects-grid">
+
+                <article class="project-card">
+                    <h3>Hra života</h3>
+                    <p>
+                        Interaktivní Conwayová simulace života použitá jako živé pozadí pro tuto reprezentační stránku.
+                        <strong>Využijte</strong> možnost zasít život s různou mírou nahodilosti pomocí ovládacích tlačítek.
+                    </p>
+                    <span class="project-tech">Vanilla JavaScript · Canvas · Algorithms</span>
+
+                    <div class="project-actions">
+                        <a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life" class="btn"
+                            target="_blank" title="Více o Conwayově hře života">
+                            Conway-Wiki
+                        </a>
+                        <a href="#" class="btn">Live</a>
+                        <a href="#" class="btn">GitHub</a>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <h3>Čtenářský deník</h3>
+                    <p>
+                        Webová aplikace pro správu databáze knih s možností ukládání vlastních čtenářských deníků,
+                        napsaná pomocí MVC přístupu a využívající principy clean architecture.
+                    </p>
+                    <span class="project-tech">C# · ASP.NET core · Entity Framework · JavaScript · Bootstrap · HTML ·
+                        CSS</span>
+
+                    <div class="project-actions">
+                        <a href="#" class="btn">Live</a>
+                        <a href="#" class="btn">GitHub</a>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <h3>Todo Manager</h3>
+                    <p>
+                        Malá webová aplikace napsaná pomocí čistého JavaScriptu ve funkčním stylu programování.
+                        Program má stavové chování inspirované React frameworkem.
+                    </p>
+                    <span class="project-tech">Vanilla Javascript · HTML · CSS</span>
+
+                    <div class="project-actions">
+                        <a href="#" class="btn">Live</a>
+                        <a href="#" class="btn">GitHub</a>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <h3>Radius Generator</h3>
+                    <p>
+                        Jednoduchý generátor rádiusů pro vizualizaci v reálném čase.
+                        Vznikl jako učební projekt pro základní práci s DOM prvky v čistém JavaScriptu.
+                    </p>
+                    <span class="project-tech">Vanilla Javascript · HTML · CSS</span>
+
+                    <div class="project-actions">
+                        <a href="#" class="btn">Live</a>
+                        <a href="#" class="btn">GitHub</a>
+                    </div>
+                </article>
+
+            </div>
+
+            <button class="btn back-btn" id="backToIntro">← Zpět</button>
+        </div>
+    </section>
+
+    <!--SEED CONTROLS -->
+    <div class="seed-controls">
+        <div class="seed-buttons">
+            <button class="btn" data-seed="0.08">8%</button>
+            <button class="btn" data-seed="0.15">15%</button>
+            <button class="btn" data-seed="0.30">30%</button>
+        </div>
+
+        <div class="generation">
+            Conway generace číslo: <span id="generationCycle">0</span>
+        </div>
+    </div>
+
+    <!-- CANVAS -->
+    <canvas id="canvas"></canvas>
+
+    <!-- BLUR LAYER -->
+    <div class="canvas-overlay"></div>
+
+    <!-- CONTACT MODAL -->
+    <div id="contactModal" class="modal hidden">
+        <div class="modal-backdrop"></div>
+
+        <div class="contact-card">
+            <h2>Michal Socha</h2>
+            <p>
+                Dobrý den,<br />
+                jsem začínající programátor, který se rád věnuje vývoji webových aplikací.
+            </p>
+
+            <ul class="contact-links">
+                <li>
+                    <span>Email</span>
+                    <a href="mailto:michal.soch@email.cz">michalsocha51@gmail.com</a>
+                </li>
+                <li>
+                    <span>GitHub</span>
+                    <a href="https://github.com/ufomamut" target="_blank">github.com/ufomamut</a>
+                </li>
+            </ul>
+
+            <button class="btn close-contact">← Zpět</button>
+        </div>
+    </div>
+
+    <script type="module" src="./scripts/main.js"></script>
+    <script src="./scripts/hero.js"></script>
+</body>
+
+</html>
