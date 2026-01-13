@@ -3,7 +3,7 @@
 An interactive visualization of **Conway’s Game of Life** used as the landing page for my personal developer portfolio.  
 The project was created primarily as a **learning exercise** to practice working with HTML canvas, basic algorithms, and state-based UI logic in plain JavaScript.
 
-[🇨🇿 verze níže](#česky)
+[🇨🇿 verze dole](#česky)
 
 ---
 
